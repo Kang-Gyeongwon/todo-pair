@@ -42,10 +42,10 @@ export const homeMoveBtn = {
   left: "320px",
   outline: "none",
   transition: "0.5s",
-  "&:hover": {
-    background: "#14213d",
-    color: "#fca311",
-    transform: "scale(1.5)"
-  }
+  // &:hover: {
+  //   background: "#14213d",
+  //   color: "#fca311",
+  //   transform: "scale(1.5)"
+  // }
 };
 
