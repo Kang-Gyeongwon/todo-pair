@@ -17,7 +17,14 @@ const HomePage = () => {
     setTodos(currentId);
   };
   return (
-    <div style={{ backgroundColor: "#000000" }}>
+    <div
+      style={{
+        width: "1200px",
+        height: "800px",
+        boxSizing: "border-box",
+        margin: "auto",
+      }}
+    >
       <Header onAddTodo={handleAddTodo} />
       <ToDoList
         todos={todos}

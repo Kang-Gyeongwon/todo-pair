@@ -15,6 +15,10 @@ const Header = (props) => {
     });
   };
   const handleClickSubmit = () => {
+    if (todosValues.title === "" || todosValues.body === "") {
+      window.alert("모든 내용을 입력해주세요");
+      return;
+    }
     props.onAddTodo({
       id: Date.now(),
       ...todosValues,
@@ -27,10 +31,9 @@ const Header = (props) => {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "5%" }}>
       <Headline>
         <span>My Todo List</span>
-        <span>React</span>
       </Headline>
       <InputBox>
         <FormLabel>제목</FormLabel>
