@@ -14,7 +14,7 @@ export const Headline = styled.div`
 
 export const InputBox = styled.div`
   background-color: #eee;
-  border-radius: 12px;
+  border-radius: 25px;
   display: flex;
   align-items: center;
   flex-direction: row;  
