@@ -1,32 +1,30 @@
 import { styled } from "styled-components";
 
 export const Headline = styled.div`
-  width: 1200px;
-  margin: 0;
   padding: 0 20px 5.75px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   font-weight: 300;
-  border-bottom: 1px solid #ddd;
+  font-size: 30px;
+  color: #ddd;
 `;
 
 export const InputBox = styled.div`
-  width: 1200px;
-  background-color: #eee;
+  background-color: #14213d;
   border-radius: 25px;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 auto;
   padding: 30px;
+  background-color: #14213d;
 `;
 
 export const FormLabel = styled.span`
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 500;
   margin-right: 3px;
 `;
 
@@ -40,11 +38,20 @@ export const FormInput = styled.input`
 `;
 
 export const AddBtn = styled.input`
-  background-color: teal;
+  background-color: #fca311;
   border: none;
   border-radius: 10px;
-  color: #fff;
+  font-size: 24px;
   font-weight: 700;
   height: 40px;
   width: 140px;
+  @font-face {
+    font-family: "Uiyeun";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  font-family: "Uiyeun";
+  color: #e8e8e8;
 `;

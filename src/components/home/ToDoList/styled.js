@@ -5,6 +5,7 @@ export const ToDoContainer = styled.div`
   padding: 12px 24px 24px;
   width: 270px;
   margin-right: 5px;
+  margin-bottom: 5px;
   background-color: #14213d;
   color: #e5e5e5;
 `;
@@ -16,11 +17,21 @@ export const BtnBox = styled.div`
 `;
 export const ToDoBtn = styled.button`
   background-color: #fca311;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
   height: 40px;
   width: 50%;
   color: #14213d;
+  @font-face {
+    font-family: "Uiyeun";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  font-family: "Uiyeun";
+  color: #e8e8e8;
 `;
 
 export const boxStyle = {
@@ -28,4 +39,5 @@ export const boxStyle = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "flex-start",
+  flexWrap: "wrap",
 };

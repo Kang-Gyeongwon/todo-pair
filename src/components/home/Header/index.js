@@ -27,10 +27,9 @@ const Header = (props) => {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "5%" }}>
       <Headline>
         <span>My Todo List</span>
-        <span>React</span>
       </Headline>
       <InputBox>
         <FormLabel>제목</FormLabel>
