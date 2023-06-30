@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const Headline = styled.div`
-  width: 100vh;
+  width: 1200px;
   margin: 0;
   padding: 0 20px 5.75px;
   display: flex;
@@ -13,12 +13,13 @@ export const Headline = styled.div`
 `;
 
 export const InputBox = styled.div`
+  width: 1200px;
   background-color: #eee;
   border-radius: 25px;
   display: flex;
   align-items: center;
-  flex-direction: row;  
-  justify-content:  space-between;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 30px;
 `;

@@ -19,7 +19,7 @@ const HomePage = () => {
   };
   return (
     <HomeBox>
-      <Header onAddTodo={handleAddTodo} />
+      <Header style={{ margin: "auto" }} onAddTodo={handleAddTodo} />
       <ToDoList
         todos={todos}
         onRemoveTodo={handleRemoveTodo}
