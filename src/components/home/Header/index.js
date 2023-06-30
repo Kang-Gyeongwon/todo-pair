@@ -15,6 +15,10 @@ const Header = (props) => {
     });
   };
   const handleClickSubmit = () => {
+    if (todosValues.title === "" || todosValues.body === "") {
+      window.alert("모든 내용을 입력해주세요");
+      return;
+    }
     props.onAddTodo({
       id: Date.now(),
       ...todosValues,
