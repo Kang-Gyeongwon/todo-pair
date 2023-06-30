@@ -32,7 +32,6 @@ const ToDoList = (props) => {
                   </div>
                   <BtnBox>
                     <ToDoBtn
-                      style={{ border: "2px solid red" }}
                       onClick={() => {
                         handleRemoveOnclick(todo.id);
                       }}
@@ -40,7 +39,6 @@ const ToDoList = (props) => {
                       삭제하기
                     </ToDoBtn>
                     <ToDoBtn
-                      style={{ border: "2px solid green" }}
                       onClick={() => {
                         handleCompletionOnclick(todo.id);
                       }}
@@ -67,7 +65,6 @@ const ToDoList = (props) => {
                   </div>
                   <BtnBox>
                     <ToDoBtn
-                      style={{ border: "2px solid red" }}
                       onClick={() => {
                         handleRemoveOnclick(todo.id);
                       }}
@@ -75,7 +72,6 @@ const ToDoList = (props) => {
                       삭제하기
                     </ToDoBtn>
                     <ToDoBtn
-                      style={{ border: "2px solid green" }}
                       onClick={() => {
                         handleCompletionOnclick(todo.id);
                       }}

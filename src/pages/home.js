@@ -17,7 +17,7 @@ const HomePage = () => {
     setTodos(currentId);
   };
   return (
-    <div>
+    <div style={{ backgroundColor: "#000000" }}>
       <Header onAddTodo={handleAddTodo} />
       <ToDoList
         todos={todos}

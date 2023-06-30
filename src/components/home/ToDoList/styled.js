@@ -1,11 +1,12 @@
 import { styled } from "styled-components";
 
 export const ToDoContainer = styled.div`
-  border: 4px solid teal;
-  border-radius: 12px;
+  border-radius: 25px;
   padding: 12px 24px 24px;
   width: 270px;
   margin-right: 5px;
+  background-color: #14213d;
+  color: #e5e5e5;
 `;
 
 export const BtnBox = styled.div`
@@ -14,11 +15,12 @@ export const BtnBox = styled.div`
   margin-top: 24px;
 `;
 export const ToDoBtn = styled.button`
-  background-color: #fff;
+  background-color: #fca311;
   border-radius: 8px;
   cursor: pointer;
   height: 40px;
   width: 50%;
+  color: #14213d;
 `;
 
 export const boxStyle = {
