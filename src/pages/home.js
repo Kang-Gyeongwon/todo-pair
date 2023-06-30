@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Header from "../home/Header";
-import ToDoList from "../home/ToDoList";
+import Header from "../components/home/Header";
+import ToDoList from "../components/home/ToDoList";
 
 const HomePage = () => {
   const [todos, setTodos] = useState([]);
