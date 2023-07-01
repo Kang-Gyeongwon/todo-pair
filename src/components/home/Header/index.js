@@ -1,11 +1,11 @@
 import { Headline, InputBox, FormLabel, FormInput, AddBtn } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
-import { AddTodo, changeInput } from "../../../redux/modules/todos";
+import { AddTodo, changeInput } from "../../../redux/modules/todosData";
 import { useCallback } from "react";
 
 const Header = () => {
   const dispatch = useDispatch();
-  const inputData = useSelector((state) => state.todos.inputData);
+  const inputData = useSelector((state) => state.todosData.inputData);
   const handleInputChange = (e) => {
     const setTodoValue = {
       ...inputData,

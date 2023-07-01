@@ -28,7 +28,7 @@ const initialState = {
   inputData: { title: "", body: "" },
   todos: [
     {
-      id: 1, 
+      id: 1,
       title: "리액트 강의보기",
       body: "챕터 1부터 챕터 12까지 학습",
       isDone: false,
@@ -36,7 +36,7 @@ const initialState = {
   ],
 };
 
-const todos = (state = initialState, action) => {
+const todosData = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_INPUT:
       return { ...state, inputData: action.input };
@@ -50,4 +50,4 @@ const todos = (state = initialState, action) => {
   }
 };
 
-export default todos;
+export default todosData;
