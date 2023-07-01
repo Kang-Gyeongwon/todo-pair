@@ -1,23 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
 import ToDoContainer from "./ToDoContainer";
 import { boxStyle } from "./styled";
-import { useCallback } from "react";
-import {
-  completionTodo,
-  removeTodo,
-} from "../../../redux/modules/todosData";
+import { completionTodo, removeTodo } from "../../../redux/modules/todosData";
 
 const ToDoList = (props) => {
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todosData.todos);
 
-  const handleCompletionTodo = useCallback((id) =>
-    dispatch(completionTodo(id), [dispatch])
-  );
+  const handleCompletionTodo = (id) => dispatch(completionTodo(id));
 
-  const handleRemoveTodo = useCallback((id) =>
-    dispatch(removeTodo(id), [dispatch])
-  );
+  const handleRemoveTodo = (id) => dispatch(removeTodo(id));
 
   return (
     <div>
