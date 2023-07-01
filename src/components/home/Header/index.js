@@ -11,9 +11,7 @@ const Header = () => {
   });
 
   const dispatch = useDispatch();
-  const input = useSelector((state) => state.todos);
-  console.log(input)
-
+  // const input = useSelector((state) => state.todos);
   const handleInputChange = (e) => {
     setTodoValue({
       ...todosValues,
@@ -24,14 +22,13 @@ const Header = () => {
   const handleClickSubmit = () => {
     todosValues.title === "" || todosValues.body === ""
       ? window.alert("모든 내용을 입력해주세요")
-      : dispatch(AddTodo(todosValues));
+      : dispatch(AddTodo(setTodoValue));
     dispatch(
       changeInput({
         title: "",
         body: "",
       })
     );
-
   };
 
   return (
