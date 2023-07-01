@@ -2,7 +2,7 @@
 const CHANGE_INPUT = "todos/CHANGE_INPUT";
 const ADD_TODO = "todos/ADD_TODO";
 const REMOVE_TODO = "todos/REMOVE";
-const COMPLETION_TODO = "todos/REMOVE";
+const COMPLETION_TODO = "todos/COMPLETION_TODO";
 
 // action creator
 export const changeInput = (input) => {
@@ -23,14 +23,14 @@ export const AddTodo = (todo) => {
   };
 };
 
-
 // 초기상태값
 const initialState = {
+  inputData: { title: "", body: "" },
   todos: [
     {
-      id: 0,
-      title: "",
-      body: "",
+      id: 1, 
+      title: "리액트 강의보기",
+      body: "챕터 1부터 챕터 12까지 학습",
       isDone: false,
     },
   ],
@@ -38,10 +38,12 @@ const initialState = {
 
 const todos = (state = initialState, action) => {
   switch (action.type) {
+    case CHANGE_INPUT:
+      return { ...state, inputData: action.input };
     case ADD_TODO:
       return {
         ...state,
-        todos: state.todos,
+        todos: state.todos.concat(action.todo),
       };
     default:
       return state;
