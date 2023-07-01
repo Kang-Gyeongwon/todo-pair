@@ -23,6 +23,19 @@ export const AddTodo = (todo) => {
   };
 };
 
+export const completionTodo = (id) => {
+  return {
+    type: COMPLETION_TODO,
+    id,
+  };
+};
+export const removeTodo = (id) => {
+  return {
+    type: REMOVE_TODO,
+    id,
+  };
+};
+
 // 초기상태값
 const initialState = {
   inputData: { title: "", body: "" },
@@ -44,6 +57,19 @@ const todosData = (state = initialState, action) => {
       return {
         ...state,
         todos: state.todos.concat(action.todo),
+      };
+
+    case COMPLETION_TODO:
+      return {
+        ...state,
+        todos: state.todos.map((todo) =>
+          todo.id === action.id ? { ...todo, isDone: !todo.isDone } : todo
+        ),
+      };
+    case REMOVE_TODO:
+      return {
+        ...state, 
+        todos: state.todos.filter((todo) => todo.id !== action.id)
       };
     default:
       return state;
