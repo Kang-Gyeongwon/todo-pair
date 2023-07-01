@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { Headline, InputBox, FormLabel, FormInput, AddBtn } from "./styled";
+import { useDispatch, useSelector } from "react-redux";
+import { AddTodo, changeInput } from "../../../redux/modules/todos";
 
-const Header = (props) => {
+const Header = () => {
   const [todosValues, setTodoValue] = useState({
     title: "",
     body: "",
     isDone: false,
   });
+
+  const dispatch = useDispatch();
+  const input = useSelector((state) => state.todos);
+  console.log(input)
 
   const handleInputChange = (e) => {
     setTodoValue({
@@ -14,20 +20,18 @@ const Header = (props) => {
       [e.target.name]: e.target.value,
     });
   };
+
   const handleClickSubmit = () => {
-    if (todosValues.title === "" || todosValues.body === "") {
-      window.alert("모든 내용을 입력해주세요");
-      return;
-    }
-    props.onAddTodo({
-      id: Date.now(),
-      ...todosValues,
-    });
-    setTodoValue({
-      title: "",
-      body: "",
-      isDone: false,
-    });
+    todosValues.title === "" || todosValues.body === ""
+      ? window.alert("모든 내용을 입력해주세요")
+      : dispatch(AddTodo(todosValues));
+    dispatch(
+      changeInput({
+        title: "",
+        body: "",
+      })
+    );
+
   };
 
   return (
