@@ -11,5 +11,8 @@ export const GlobalStyle = createGlobalStyle`
   font-family: 'KyoboHandwriting2021sjy';
   background-color: #000000;
   color: #E8E8E8;
+  max-width: 1200px;
+  min-width: 800px;
+  margin : 0 auto;
   }
 `;
