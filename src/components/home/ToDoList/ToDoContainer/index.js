@@ -1,8 +1,6 @@
 import { BtnBox, ToDoBtn, ToDoContainerBox } from "./styled";
 
-
-const ToDoContainer = (props) => {
-
+const ToDoContainer = (props) =>  {
   return (
     <ToDoContainerBox>
       <div>
@@ -12,14 +10,14 @@ const ToDoContainer = (props) => {
       <BtnBox>
         <ToDoBtn
           onClick={() => {
-            props.onRemoveOnclick(props.id);
+            props.handleRemoveOnclick(props.id);
           }}
         >
           삭제하기
         </ToDoBtn>
         <ToDoBtn
           onClick={() => {
-            props.onCompletionOnclick(props.id);
+            props.handleCompletionOnclick(props.id);
           }}
         >
           완료
@@ -27,6 +25,6 @@ const ToDoContainer = (props) => {
       </BtnBox>
     </ToDoContainerBox>
   );
-};
+}
 
 export default ToDoContainer;
