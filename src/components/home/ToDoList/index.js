@@ -1,24 +1,23 @@
+import { useDispatch, useSelector } from "react-redux";
 import ToDoContainer from "./ToDoContainer";
 import { boxStyle } from "./styled";
+import { completionTodo, removeTodo } from "../../../redux/modules/todosData";
+import { useCallback } from "react";
 
-const ToDoList = (props) => {
-  const todos = props.todos;
-  const handleCompletionOnclick = (currentId) => {
-    const updatedTodos = todos.map((todo) => {
-      if (todo.id === currentId) {
-        return {
-          ...todo,
-          isDone: !todo.isDone,
-        };
-      }
-      return todo;
-    });
-    props.onUpdateTodos(updatedTodos);
-    console.log(updatedTodos);
-  };
-  const handleRemoveOnclick = (removeId) => {
-    props.onRemoveTodo(removeId);
-  };
+const ToDoList = () => {
+  const dispatch = useDispatch();
+  const todos = useSelector((state) => state.todosData.todos);
+
+  const handleCompletionTodo = useCallback(
+    (id) => dispatch(completionTodo(id)),
+    [dispatch]
+  );
+
+  const handleRemoveTodo = useCallback(
+    (id) => dispatch(removeTodo(id)),
+    [dispatch]
+  );
+
   return (
     <div>
       <div>
@@ -31,8 +30,8 @@ const ToDoList = (props) => {
                 id={todo.id}
                 title={todo.title}
                 body={todo.body}
-                handleCompletionOnclick={handleCompletionOnclick}
-                handleRemoveOnclick={handleRemoveOnclick}
+                onCompletionOnclick={handleCompletionTodo}
+                onRemoveOnclick={handleRemoveTodo}
               />
             ) : null
           )}
@@ -48,8 +47,8 @@ const ToDoList = (props) => {
                 id={todo.id}
                 title={todo.title}
                 body={todo.body}
-                handleCompletionOnclick={handleCompletionOnclick}
-                handleRemoveOnclick={handleRemoveOnclick}
+                onCompletionOnclick={handleCompletionTodo}
+                onRemoveOnclick={handleRemoveTodo}
               />
             ) : null
           )}
