@@ -15,6 +15,7 @@ export const BtnBox = styled.div`
   gap: 10px;
   margin-top: 24px;
 `;
+
 export const ToDoBtn = styled.button`
   background-color: #fca311;
   border: none;
@@ -34,10 +35,3 @@ export const ToDoBtn = styled.button`
   color: #e8e8e8;
 `;
 
-export const boxStyle = {
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  justifyContent: "flex-start",
-  flexWrap: "wrap",
-};
