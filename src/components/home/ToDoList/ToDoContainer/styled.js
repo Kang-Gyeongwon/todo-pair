@@ -8,6 +8,7 @@ export const ToDoContainerBox = styled.div`
   margin-bottom: 5px;
   background-color: #14213d;
   color: #e5e5e5;
+  position: relative;
 `;
 
 export const BtnBox = styled.div`
@@ -34,4 +35,8 @@ export const ToDoBtn = styled.button`
   font-family: "Uiyeun";
   color: #e8e8e8;
 `;
-
+export const DeatailMoveBtn = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 285px;
+`;
