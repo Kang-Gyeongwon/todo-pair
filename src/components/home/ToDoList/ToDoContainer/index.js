@@ -1,6 +1,7 @@
-import { BtnBox, ToDoBtn, ToDoContainerBox } from "./styled";
-
+import { BtnBox, ToDoBtn, ToDoContainerBox, DeatailMoveBtn } from "./styled";
+import { useNavigate } from "react-router-dom";
 const ToDoContainer = (props) => {
+  const navigate = useNavigate();
   return (
     <ToDoContainerBox>
       <div
@@ -13,9 +14,8 @@ const ToDoContainer = (props) => {
       >
         <div>
           <h2>{props.title}</h2>
-          <span >{props.body}</span>
+          <span>{props.body}</span>
         </div>
-        <span style={{cursor: "pointer"}}>+</span>
       </div>
       <BtnBox>
         <ToDoBtn
@@ -33,6 +33,14 @@ const ToDoContainer = (props) => {
           완료
         </ToDoBtn>
       </BtnBox>
+      <DeatailMoveBtn
+        style={{ cursor: "pointer" }}
+        onClick={() => {
+          navigate(`/detail/${props.id}`);
+        }}
+      >
+        +
+      </DeatailMoveBtn>
     </ToDoContainerBox>
   );
 };

@@ -68,8 +68,8 @@ const todosData = (state = initialState, action) => {
       };
     case REMOVE_TODO:
       return {
-        ...state, 
-        todos: state.todos.filter((todo) => todo.id !== action.id)
+        ...state,
+        todos: state.todos.filter((todo) => todo.id !== action.id),
       };
     default:
       return state;
