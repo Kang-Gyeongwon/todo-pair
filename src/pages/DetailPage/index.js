@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  ListBox,
-  homeMoveBtn,
-  Header,
-  InnerBox,
-} from "../components/DetailPage/styled";
+import { ListBox, homeMoveBtn, Header, InnerBox } from "./styled";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -25,7 +20,7 @@ const DetailPage = () => {
                 {item.title}
               </h1>
               <p style={{ fontSize: "26px" }}>{item.body}</p>
-              <div style={{marginTop: '95px'}}>
+              <div style={{ marginTop: "95px" }}>
                 <p>id: {item.id}</p>
                 <p>{new Date(item.id).toLocaleDateString()}</p>
               </div>

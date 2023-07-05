@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import HomePage from "./pages/home";
-import DetailPage from "./pages/detailPage"
+import DetailPage from "./pages/DetailPage";
 import { GlobalStyle } from "./Globalstyle";
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/detail/:todo"  element={<DetailPage />} />
+          <Route path="/detail/:todo" element={<DetailPage />} />
         </Routes>
       </BrowserRouter>
     </>

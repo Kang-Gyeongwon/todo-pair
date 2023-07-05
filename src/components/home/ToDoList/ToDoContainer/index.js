@@ -4,14 +4,7 @@ const ToDoContainer = (props) => {
   const navigate = useNavigate();
   return (
     <ToDoContainerBox>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
+      <div>
         <div>
           <h2>{props.title}</h2>
           <span>{props.body}</span>
@@ -34,7 +27,6 @@ const ToDoContainer = (props) => {
         </ToDoBtn>
       </BtnBox>
       <DeatailMoveBtn
-        style={{ cursor: "pointer" }}
         onClick={() => {
           navigate(`/detail/${props.id}`);
         }}

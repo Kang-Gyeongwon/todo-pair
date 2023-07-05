@@ -39,4 +39,5 @@ export const DeatailMoveBtn = styled.div`
   position: absolute;
   top: 20px;
   left: 285px;
+  cursor: pointer;
 `;

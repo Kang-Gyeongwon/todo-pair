@@ -48,4 +48,3 @@ export const homeMoveBtn = {
   //   transform: "scale(1.5)"
   // }
 };
-
