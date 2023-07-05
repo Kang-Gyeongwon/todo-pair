@@ -1,16 +1,9 @@
 // action value
-const CHANGE_INPUT = "todos/CHANGE_INPUT";
 const ADD_TODO = "todos/ADD_TODO";
 const REMOVE_TODO = "todos/REMOVE";
 const COMPLETION_TODO = "todos/COMPLETION_TODO";
 
 // action creator
-export const changeInput = (input) => {
-  return {
-    type: CHANGE_INPUT,
-    input,
-  };
-};
 export const AddTodo = (todo) => {
   return {
     type: ADD_TODO,
@@ -38,7 +31,6 @@ export const removeTodo = (id) => {
 
 // 초기상태값
 const initialState = {
-  inputData: { title: "", body: "" },
   todos: [
     {
       id: 1,
@@ -51,8 +43,6 @@ const initialState = {
 
 const todosData = (state = initialState, action) => {
   switch (action.type) {
-    case CHANGE_INPUT:
-      return { ...state, inputData: action.input };
     case ADD_TODO:
       return {
         ...state,
