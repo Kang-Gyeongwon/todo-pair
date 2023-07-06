@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import HomePage from "./pages/home";
-import DetailPage from "./pages/DetailPage";
+import DetailPage from "./pages/detail";
 import { GlobalStyle } from "./Globalstyle";
 
 const App = () => {
