@@ -1,6 +1,6 @@
 import { Headline, InputBox, FormLabel, FormInput, AddBtn } from "./styled";
 import { useDispatch } from "react-redux";
-import { AddTodo } from "../../../redux/modules/todosData";
+import { addTodo } from "../../../redux/modules/todosData";
 import { useCallback, useState } from "react";
 
 const Header = () => {
@@ -25,7 +25,7 @@ const Header = () => {
     };
     inputForm.title === "" || inputForm.body === ""
       ? window.alert("모든 내용을 입력해주세요")
-      : dispatch(AddTodo(inputData));
+      : dispatch(addTodo(inputData));
     setInputForm({
       title: "",
       body: "",

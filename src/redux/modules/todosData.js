@@ -4,7 +4,7 @@ const REMOVE_TODO = "todos/REMOVE";
 const COMPLETION_TODO = "todos/COMPLETION_TODO";
 
 // action creator
-export const AddTodo = (todo) => {
+export const addTodo = (todo) => {
   return {
     type: ADD_TODO,
     todo: {
