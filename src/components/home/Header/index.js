@@ -1,8 +1,8 @@
-import { Headline } from "./styled";
+import { Headline, headerBoxStyle } from "./styled";
 
 const Header = () => {
   return (
-    <div style={{ marginTop: "5%" }}>
+    <div style={headerBoxStyle}>
       <Headline>
         <span>My Todo List</span>
       </Headline>
