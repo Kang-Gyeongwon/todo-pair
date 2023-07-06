@@ -1,5 +1,6 @@
 import Header from "../components/home/Header";
 import ToDoList from "../components/home/ToDoList";
+import TodoInput from "../components/home/TodoInput";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       }}
     >
       <Header />
+      <TodoInput />
       <ToDoList />
     </div>
   );
